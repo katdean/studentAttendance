@@ -24,9 +24,7 @@ class TeachersCourseList extends Component {
 
   getAttendance(event){
     event.preventDefault();
-    alert ("form submitted");
     const  nameForUrl = this.state.selectedCourse;
-    console.log(nameForUrl);
     this.props.history.push(`/course/${nameForUrl}`);
   }
 
@@ -42,8 +40,8 @@ class TeachersCourseList extends Component {
           <header id="teacherview">{this.state.teacherList[1].name}</header>
             <h2>Teacher ID: {this.state.teacherList[1].id}</h2>
             <form id="courseform" onSubmit={(e)=>{this.getAttendance(e)}}>
-            <select name="coursename" onChange={this.handleSelect}>
-              <option value="---">Choose a Course </option>
+            <select id = "coursebox" name="coursename" onChange={this.handleSelect} required>
+              <option value="">Choose a Course </option>
               {
                 this.state.courseList.map((courseName, _index)=> {
                   return (
@@ -54,7 +52,7 @@ class TeachersCourseList extends Component {
                 })
               }
             </select>
-            <input type="submit" value="Find my rooster"/>
+            <input type="submit" value="Find My Roster"/>
           </form>
       </main>
     )
