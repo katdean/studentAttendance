@@ -1,40 +1,79 @@
 body {
+  font-family: Arial, Verdana, sans-serif;
+  background-color: white;
   height: auto;
-  background-color: blue;
-  font-style: bold;
-  border-style: solid;
+  width: auto;
 }
 
-.studentList {
-
-}
-
-p {
+#header {
   color: blue;
+  font: Arial;
+  font-size: 2rem;
+  border: 12px;
+  margin: 16px;
+  padding: 5px;
 }
 
-header {
-  display: block;
+h1 {
+  color: blue;
+  width: auto;
+  text-align: center;
+}
+div.container{
+  border: 12px;
+  margin: 16px;
+  padding: 5px;
 }
 
-header.teachersView {
-  color: black;
-}
-
-#submit-student-attendance {
-/*submit buttons will be consistent throughout application*/
-}
-
-.courseHeader {
-/*header style will be consistent throughout application*/
+p.banner{
+  font-size: 22px;
+  text-align: center;
 }
 
 ol {
-  /*ordered list for both className and studentList will remain uniform*/
-  text-align: left;
+  font-size: 18px;
+  color: black;
 }
 
-ol:checked {
+li{
+  text-align: center;
+}
+ol#studentList{
+
+  margin: 16px;
+  padding: 5px;
+}
+
+#studentList{
+  text-align: center;
+}
+.announcements {
+  margin-top: 16px;
+  text-align: right;
+  font-size: 14px;
+}
+
+header.teacherview.
+teachername (h1) {
+teacherID(h2)
+  color: black;
+}
+
+/*#submit-student-attendance {
+coursebox- make bigger add margin by roster
+/*submit buttons will be consistent throughout application*/
+/*}*/
+
+/*.courseHeader {
+/*header style will be consistent throughout application*/
+/*}*/
+
+/* ol {
+  /*ordered list for both className and studentList will remain uniform*/
+  /* text-align: left;
+} */
+
+li:checked {
   /*ordered list will change in weight when box is checked (for diferentiation)*/
   font-weight: bold;
 }
