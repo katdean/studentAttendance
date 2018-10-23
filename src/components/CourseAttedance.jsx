@@ -33,11 +33,17 @@ class CourseAttendance extends Component {
     alert("Submitted");
   };
 
+  getTeacherCourse(event) {
+    event.preventDefault ();
+    // alert ("Back to Teacher");
+    this.props.history.push(`/`);
+  }
+
   render(){
     return (
       <main>
-          <header id="courseHeader">class: Math 100</header>
-          <form>
+          <header id="courseHeader">Course: {this.props.match.params.course_id}</header>
+          <form onSubmit = {(e) => {this.getTeacherCourse(e)}}>
             <ol className="studentList">
               {
                 this.state.studentList.map(function(student, index){
@@ -47,10 +53,9 @@ class CourseAttendance extends Component {
 
             </ol>
             <input
-              type="button"
+              type="submit"
               id="submit-student-attendance"
               value="Submit"
-              onClick={ this.submitList}
             />
           </form>
       </main>
