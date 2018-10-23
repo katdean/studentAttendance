@@ -1,8 +1,14 @@
 import React, { Component } from "react";
+import TeachersCourseList from "./TeachersCourseList"
 
 class Main extends Component {
-  constructor(){
-    super();
+  render () {
+    return (
+      <div>
+        <TeachersCourseList/>
+      </div>
+    )
+
   }
 }
 
