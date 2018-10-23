@@ -36,9 +36,9 @@ class CourseAttendance extends Component {
   render(){
     return (
       <main>
-          <header>class: Math 100</header>
+          <header id="courseHeader">class: Math 100</header>
           <form>
-            <ol>
+            <ol className="studentList">
               {
                 this.state.studentList.map(function(student, index){
                   return ( <li><input name={`student-${index}`} id={`student-${index}`} type="checkbox"/> <label htmlFor={`student-${index}`}></label>{student.name}</li>);
