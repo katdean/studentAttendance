@@ -7,34 +7,42 @@ class TeachersCourseList extends Component {
 
     this.state = {
       courseList:[
-        "Math 100",
-        "English 200",
-         "History 301",
-      "Science 405"
-
+        "Math",
+        "English",
+         "History",
+         "Science"
       ],
-
       teacherList:[
         { name: "Mr. Smith", id: 123},
         { name: "Ms. Jones", id: 456 },
         { name: "Mrs. Gonzalez", id: 789}
-      ]
+      ],
+      selectedCourse: null,
     };
-
-    this.submitCourse = this.submitCourse.bind(this);
+    this.handleSelect = this.handleSelect.bind(this);
   }
 
-  submitCourse() {
-    alert("Submitted");
-  };
+  getAttendance(event){
+    event.preventDefault();
+    alert ("form submitted");
+    const  nameForUrl = this.state.selectedCourse;
+    console.log(nameForUrl);
+    this.props.history.push(`/course/${nameForUrl}`);
+  }
+
+  handleSelect(event){
+    this.setState({
+      selectedCourse: event.target.value,
+    })
+  }
 
   render(){
     return (
       <main>
           <header id="teacherview">{this.state.teacherList[1].name}</header>
             <h2>Teacher ID: {this.state.teacherList[1].id}</h2>
-            <form id="courseform">
-            <select name="coursename">
+            <form id="courseform" onSubmit={(e)=>{this.getAttendance(e)}}>
+            <select name="coursename" onChange={this.handleSelect}>
               <option value="---">Choose a Course </option>
               {
                 this.state.courseList.map((courseName, _index)=> {
@@ -46,7 +54,7 @@ class TeachersCourseList extends Component {
                 })
               }
             </select>
-            <button type="submit" onClick={ this.submitCourse}>Submit</button>
+            <input type="submit" value="Find my rooster"/>
           </form>
       </main>
     )
