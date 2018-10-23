@@ -1,0 +1,40 @@
+body {
+  height: auto;
+  background-color: blue;
+  font-style: bold;
+  border-style: solid;
+}
+
+.studentList {
+
+}
+
+p {
+  color: blue;
+}
+
+header {
+  display: block;
+}
+
+header.teachersView {
+  color: black;
+}
+
+#submit-student-attendance {
+/*submit buttons will be consistent throughout application*/
+}
+
+.courseHeader {
+/*header style will be consistent throughout application*/
+}
+
+ol {
+  /*ordered list for both className and studentList will remain uniform*/
+  text-align: left;
+}
+
+ol:checked {
+  /*ordered list will change in weight when box is checked (for diferentiation)*/
+  font-weight: bold;
+}
