@@ -37,9 +37,6 @@ class CourseAttendance extends Component {
     this.setState ({
       studentList: tempStudList
     });
-    // this.setState({
-    //
-    // })
   };
 
   submitList() {
@@ -49,7 +46,9 @@ class CourseAttendance extends Component {
   getTeacherCourse(event) {
     event.preventDefault ();
     // alert ("Back to Teacher");
-    this.props.history.push(`/`);
+    // this.props.history.push(`/`);
+    // this.props.history.push(`/report`);
+    this.props.history.push({pathname:`/report`, state:{detail: this.state.studentList}});
   }
 
   render(){
