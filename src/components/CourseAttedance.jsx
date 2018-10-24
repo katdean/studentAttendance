@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import '../css/index.css';
 
 class CourseAttendance extends Component {
   constructor(){
@@ -75,11 +75,12 @@ class CourseAttendance extends Component {
               }
 
             </ol>
-            <input
+            <div class="btn-container"><input
               type="submit"
               id="submit-student-attendance"
               value="Submit"
             />
+            </div>
           </form>
       </main>
     )

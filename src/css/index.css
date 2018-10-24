@@ -1,0 +1,77 @@
+body {
+
+  margin: 2rem;
+  padding: 8px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+div#header{
+  text-align: center;
+  font-size: 18px;
+}
+
+h1{
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+}
+
+form#courseform{
+  margin: 2rem;
+  width: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+select#coursebox {
+  font-size: 18px;
+  padding-left: 1rem;
+  margin: 1rem;
+}
+
+input{
+  font-size: 18px;
+  margin: 1rem;
+}
+
+header#teacherview {
+  margin: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+header#courseHeader {
+  text-align: center;
+  font-size: 22px;
+}
+
+input#submit-student-attendance {
+  font-size: 20px;
+  margin: 1rem;
+  width: auto;
+  padding: 1rem;
+}
+
+ol.studentList{
+
+}
+
+div.btn-container{
+  text-align: center;
+}
+
+studentList:checked {
+  /*ordered list will change in weight when box is checked (for diferentiation)*/
+  font-weight: bold;
+}
