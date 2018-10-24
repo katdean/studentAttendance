@@ -3,6 +3,13 @@ import ReactToPrint from "react-to-print";
 import AttendanceData from "./AttendanceData"
 
 class AttendanceReport extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.state = {
+      studentList: this.props.location.state.detail,
+    };
+  }
   render() {
     return (
       <div>
@@ -10,7 +17,7 @@ class AttendanceReport extends React.Component {
           trigger={() => <a href="#">Print</a>}
           content={() => this.componentRef}
         />
-        <AttendanceData attendanceList={this.props.location.state.detail} ref={el => (this.componentRef = el)} />
+        <AttendanceData attendanceList={this.state.studentList} ref={el => (this.componentRef = el)} />
       </div>
     );
   }
