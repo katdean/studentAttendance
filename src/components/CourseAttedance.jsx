@@ -8,26 +8,39 @@ class CourseAttendance extends Component {
     this.state = {
     studentList:[
       { "name" : "Kathy Dean",
-          "isPresent":null},
+          "isPresent":false},
       {
         "name" : "Masiel Morillo",
-        "isPresent":null},
+        "isPresent":false},
       {
         "name" : "Pamela Tobon",
-        "isPresent":null},
+        "isPresent":false},
       { "name" : "Kathy Dean",
-          "isPresent":null},
+          "isPresent":false},
       {
         "name" : "Masiel Morillo",
-        "isPresent":null},
+        "isPresent":false},
       {
         "name" : "Pamela Tobon",
-        "isPresent":null},
+        "isPresent":false},
     ]
     };
 
     this.submitList = this.submitList.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
+
+  handleChange(event) {
+    let tempStudList = this.state.studentList
+    tempStudList.splice(event.target.value, 1, { "name": tempStudList[event.target.value].name, "isPresent":!tempStudList[event.target.value].isPresent })
+
+    this.setState ({
+      studentList: tempStudList
+    });
+    // this.setState({
+    //
+    // })
+  };
 
   submitList() {
     alert("Submitted");
@@ -47,8 +60,19 @@ class CourseAttendance extends Component {
             <ol className="studentList">
               {
                 this.state.studentList.map(function(student, index){
-                  return ( <li><input name={`student-${index}`} id={`student-${index}`} type="checkbox"/> <label htmlFor={`student-${index}`}></label>{student.name}</li>);
-                })
+                  return (
+                    <li>
+                      <input  name={`student-${index}`}
+                              id={`student-${index}`}
+                              type="checkbox"
+                              onChange = {this.handleChange}
+                              value = {index}
+                              />
+                      <label htmlFor={`student-${index}`}>
+                        {student.name}
+                      </label>
+                    </li>);
+                }.bind(this))
               }
 
             </ol>
