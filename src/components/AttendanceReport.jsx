@@ -17,7 +17,7 @@ class AttendanceReport extends React.Component {
           trigger={() => <a href="#">Print</a>}
           content={() => this.componentRef}
         />
-        <AttendanceData attendanceList={this.state.studentList} ref={el => (this.componentRef = el)} />
+        <AttendanceData history={this.props.history} attendanceList={this.state.studentList} ref={el => (this.componentRef = el)} />
       </div>
     );
   }
