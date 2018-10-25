@@ -5,7 +5,7 @@ import AttendanceData from "./AttendanceData"
 class AttendanceReport extends React.Component {
   render() {
     return (
-      <div>
+      <div class="formData">
         <ReactToPrint
           trigger={() => <a href="#">Print</a>}
           content={() => this.componentRef}

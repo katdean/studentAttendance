@@ -55,7 +55,7 @@ class CourseAttendance extends Component {
     return (
       <main>
           <header id="courseHeader">Course: {this.props.match.params.course_id}</header>
-          <form onSubmit = {(e) => {this.getTeacherCourse(e)}}>
+          <form class="formReport" onSubmit = {(e) => {this.getTeacherCourse(e)}}>
             <ol className="studentList">
               {
                 this.state.studentList.map(function(student, index){

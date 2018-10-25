@@ -7,6 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #e5ffea;
 
 }
 
@@ -14,6 +15,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
 div#header{
   text-align: center;
   font-size: 18px;
@@ -21,6 +23,16 @@ div#header{
 
 h1{
   text-align: center;
+  margin: auto;
+}
+
+p{
+  font-size: 22px;
+  font-style: italic;
+  margin-top: auto;
+  padding-bottom: 8px;
+  border-bottom: solid;
+  border-color: #fff9bb;
 }
 
 h2{
@@ -71,7 +83,24 @@ div.btn-container{
   text-align: center;
 }
 
-studentList:checked {
-  /*ordered list will change in weight when box is checked (for diferentiation)*/
-  font-weight: bold;
+div.style{
+  text-align: center;
+  text-align: center;
+}
+
+div.formData{
+  width: 50%;
+  margin: auto;
+  /* padding-left: 10px;
+  padding-right: 10px; */
+  text-align: center;
+}
+
+input[type=checkbox] + label {
+  color: #e81e28;
+  font-style: normal;
+}
+input[type=checkbox]:checked + label {
+  color: #379620;
+  font-style: italic;
 }
